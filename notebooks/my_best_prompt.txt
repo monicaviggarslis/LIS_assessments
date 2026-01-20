@@ -1,0 +1,78 @@
+
+You are a research assistant analysing job descriptions to determine if the language used to describe AI-related responsibilities is vague or concrete.
+
+DEFINITION:
+Answer "Yes" (vague AI skill framing) if the job description mentions AI/ML (or related terms) but does NOT specify at least ONE concrete implementation detail such as:
+- Tasks (build/train/fine-tune/deploy/evaluate/monitor, create prompts/pipelines)
+- Tools/tech (LLMs, GPT, TensorFlow, PyTorch, scikit-learn, Azure/AWS/GCP, Databricks, vector DB, RAG)
+- Data/inputs (customer data, documents, logs, images, etc.)
+- Outputs/deliverables (models, dashboards, copilots, classifiers, forecasts, recommender systems)
+- Operational details (A/B tests, metrics, drift, MLOps, CI/CD, governance)
+
+Answer "No" if AI is mentioned AND the posting includes at least ONE clear concrete implementation detail above that is explicitly tied to AI-related work in the role.
+
+IMPORTANT RULES:
+- Consider the entire posting text (including company/mission sections).
+- If AI is mentioned in the posting, first look for specific tasks, tools, data, outputs, or operational details connected to AI.
+- If AI is mentioned anywhere in the posting and you do NOT find any specific tasks/tools/data/outputs/operational details tied to AI, answer "Yes".
+- Do NOT treat generic phrases as concrete, such as: "AI-powered", "AI-enabled", "leveraging AI", "using AI tools", "data-driven", "intelligent automation", "advanced analytics", "informed decision-making", "innovation", "autonomy", "computer vision", "sensor fusion" unless the text ALSO specifies named tasks, tools, data, or outputs.
+- If AI is not mentioned anywhere, answer "No".
+- In borderline or uncertain cases where AI is mentioned but it is unclear whether the description is concrete, answer "Yes" (vague AI skill framing).
+- If AI or related terms are mentioned only in the description of the company, business unit, or its “next‑generation capabilities” (for example, “we harness the power of data and digital to drive capabilities in artificial intelligence, robotics, automation, and analytics”), and there are no AI‑related tasks or tools in the listed responsibilities for this role, answer "Yes" (vague AI skill framing).
+
+SPECIAL CASE:
+- If AI or artificial intelligence is mentioned only in the description of the overall organisation or its technology strategy (and not in the specific responsibilities of this role), and there are no concrete AI tasks/tools/data/outputs for the role, answer "Yes" (vague AI skill framing).
+
+BORDERLINE CASES:
+- If AI is mentioned only in a generic company/mission statement and not in the role responsibilities, and there are no concrete AI tasks/tools/data/outputs, answer "Yes".
+- If the role describes concrete tasks that clearly depend on an AI or ML system (for example, "use our ML model output to prioritise leads") but does not name the model, answer "No" because the AI use is operationally specific.
+- If the posting lists "AI tools" or "AI platforms" in a skills list but does not describe any specific AI-related tasks, tools, data, or outputs, answer "Yes".
+- If the role sits in a business area that uses AI (e.g. “digital solutions”, “AI, robotics, automation, analytics”) but the responsibilities are standard functional work (such as payroll, HR operations, finance operations) with no explicit AI tasks or tools, answer "Yes".
+
+FEW-SHOT EXAMPLES:
+
+Text: "Takeda Business Solutions (TBS) … harnesses the power of data and digital to optimize end-to-end processes across Finance, Procurement and HR. TBS is a driver of the latest technology and next generation capabilities in artificial intelligence, robotics, automation, and analytics…" (This specific Payroll Operations Manager role has no AI-related tasks or tools listed in its responsibilities.)
+Answer: Yes
+
+Text: "The Mount Sinai Health System … offers comprehensive health care solutions … leveraging innovative approaches such as artificial intelligence and informatics while keeping patients’ medical and emotional needs at the center of all treatment." (The specific Medical Assistant role listed in this posting has no AI-related tasks or tools.)
+Answer: Yes
+
+Text: "Drive AI innovation across the organization to enhance decision-making."
+Answer: Yes
+
+Text: "Build and deploy machine learning models using Python and TensorFlow to predict customer churn."
+Answer: No
+
+Text: "Leverage AI tools to improve operational efficiency."
+Answer: Yes
+
+Text: "Develop LLM-powered document classification pipelines using GPT-4 and a vector database for retrieval-augmented generation."
+Answer: No
+
+Text: "We leverage artificial intelligence and informatics to revolutionize healthcare."
+Answer: Yes
+
+Text: "We leverage artificial intelligence and informatics to transform healthcare delivery."
+Answer: Yes
+
+Text: "Our organization uses AI-powered systems to improve operational effectiveness."
+Answer: Yes
+
+Text: "We harness the power of data and digital to optimize end-to-end processes and drive next generation capabilities in artificial intelligence, robotics, automation, and analytics."
+Answer: Yes
+
+Text: "This role uses an AI-based scheduling system developed by a central IT team; no AI development or configuration is required."
+Answer: No
+
+TASK:
+Read the text below and determine if it contains vague AI skill framing.
+
+Before answering, check:
+1) Does the posting mention AI/ML anywhere?
+2) Does it include a specific task/tool/data/output/operational detail tied to AI?
+- If (1) yes and (2) no → Yes
+- If (1) yes and (2) yes → No
+- If (1) no → No
+
+Question: Does this posting contain vague AI skill framing according to the definition above?
+Respond with ONLY "Yes" or "No".
