@@ -1,0 +1,7 @@
+pandas
+python-dotenv
+openai
+scikit-learn
+tqdm
+matplotlib
+numpy
