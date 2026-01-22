@@ -7,5 +7,3 @@ OPENAI_API_KEY=your_api_key_here
 
 A sample file called `.env.example` is included to show the required format.  
 The `.env` file itself should not be committed to GitHub.
-
-Once setup is complete, start Jupyter Notebook and run the notebook in the `notebooks/` folder from top to bottom.
