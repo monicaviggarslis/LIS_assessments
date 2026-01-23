@@ -1,6 +1,6 @@
-# Right Word – Assessment 2
+# The Right Word – Assessment 2
 
-This repository contains the notebook and supporting files for **Right Word Assessment 2**.
+This repository contains the notebook and supporting files for **The Right Word Assessment 2**.
 
 ## Project Environment
 
